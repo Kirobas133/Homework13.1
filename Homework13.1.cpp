@@ -1,7 +1,6 @@
 ﻿// Homework13.1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-#define _USE_MATH_DEFINES
 #include<iostream>
 #include<thread>
 #include <Windows.h>
@@ -9,7 +8,7 @@
 #include "Timer.h"
 
 
-void window(int & queue) {
+void window(int& queue) {
     std::this_thread::sleep_for(std::chrono::seconds(2));
     while (queue != 0) {
         queue--;
@@ -19,7 +18,7 @@ void window(int & queue) {
     }
 
 }
-void peoples(int & queue, const int &maxqueine) {
+void peoples(int& queue, const int& maxqueine) {
     int queinecounts = 0;
     while (queinecounts < maxqueine) {
         queue++;
